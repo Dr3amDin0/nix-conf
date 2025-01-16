@@ -25,10 +25,10 @@
         src = .|.;
 
         snowfall = {
-            namespace = "dr3amnyx";
+            namespace = "nyxia";
             meta = {
-                name = "dr3amnyx";
-                title = "dr3amnyx";
+                name = "nyxia";
+                title = "nyxia";
             };
         };
 
