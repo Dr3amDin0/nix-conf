@@ -23,11 +23,6 @@
             };
         };
 
-        # service configuration            
-        services = {
-            resolved.enable = true;
-        };
-
         # system configuration
         system = {
             nixos.label = "revision";
@@ -39,15 +34,20 @@
             boot.loader.efi.canTouchEfiVariables = true;
         };
 
-        # networking configuration
-        networking = {
-            networking.networkmanager.enable = true;
-        };
-
         # set timezone
         time = {
             timeZone = "Europe/Berlin";
             hardwareClockInLocalTime = true;
+        };
+
+        # service configuration            
+        services = {
+            resolved.enable = true;
+        };
+
+        # networking configuration
+        networking = {
+            networking.networkmanager.enable = true;
         };
 }
 
