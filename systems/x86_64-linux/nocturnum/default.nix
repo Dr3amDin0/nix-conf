@@ -6,6 +6,11 @@
 
         # load from namespace
         nyxia = {
+
+            packages = {
+                neovim.enable = true;
+            };
+
             # create user
             users = {
                 dream = {
