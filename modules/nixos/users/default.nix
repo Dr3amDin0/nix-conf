@@ -60,7 +60,7 @@ let
   };
 in
 {
-  options.boerg= {
+  options.nyxia= {
     users = mkOption {
       default = {};
       type = attrsOf (submodule (

@@ -3,7 +3,6 @@
 {
     imports =
         [./hardware-configuration.nix];
-    
 
         # load from namespace
         nyxia = {
@@ -26,12 +25,13 @@
         # system configuration
         system = {
             nixos.label = "revision";
+            stateVersion = "25.05";
         };
 
         # bootloader configuration
-        bootloader = {
-            boot.loader.systemd-boot.enable = true;
-            boot.loader.efi.canTouchEfiVariables = true;
+        boot = {
+            loader.systemd-boot.enable = true;
+            loader.efi.canTouchEfiVariables = true;
         };
 
         # set timezone
@@ -47,7 +47,7 @@
 
         # networking configuration
         networking = {
-            networking.networkmanager.enable = true;
+            networkmanager.enable = true;
         };
 }
 
