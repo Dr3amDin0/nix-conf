@@ -8,7 +8,7 @@
         nyxia = {
 
             packages = {
-                default.nix = true;
+                core.nix = true;
             };
 
             # create user

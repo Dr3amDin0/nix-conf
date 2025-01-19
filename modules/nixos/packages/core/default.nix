@@ -12,9 +12,9 @@ in
 	};
 	
     config = mkIf cfg.enable {
-		environment.systemPackages = with packages.;[
+		environment.systemPackages = with "packages.";[
             neovim
-        ]
+        ];
         
     };
 }
