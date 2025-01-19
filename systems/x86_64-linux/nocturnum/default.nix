@@ -8,6 +8,7 @@
         nyxia = {
 
             packages = {
+                # install core packages
                 core.enable = true;
             };
 

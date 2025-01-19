@@ -2,19 +2,13 @@
 
 with lib;
 with lib.types;
+
 let
-	cfg = config.nyxia.packages.utils;
+	cfg = config.nyxia.packages.core;
 in
 {
-	options.nyxia.packages.utils.enable = mkOption {
+	options.nyxia.packages.core.enable = mkOption {
 		type = bool;
 		default = false;
 	};
-	
-    config = mkIf cfg.enable {
-		environment.systemPackages = with "packages.";[
-            neovim
-        ];
-        
-    };
 }

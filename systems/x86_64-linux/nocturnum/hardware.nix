@@ -40,6 +40,11 @@
         options = [ "subvolumes=@var" "compress=zstd" "noatime" ];
     };
 
-    swapDevices = [{ device = "/swap/swapfile";}];
+    swapDevices = 
+    [
+        { 
+            device = "/dev/disk/by-label/SWAP";
+        }
+    ];
 
 }
