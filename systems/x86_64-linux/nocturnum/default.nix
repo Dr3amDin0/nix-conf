@@ -2,13 +2,13 @@
 
 {
     imports =
-        [./hardware-configuration.nix];
+        [./hardware.nix];
 
         # load from namespace
         nyxia = {
 
             packages = {
-                neovim.enable = true;
+                default.nix = true;
             };
 
             # create user
