@@ -11,4 +11,18 @@ in
 		type = bool;
 		default = false;
 	};
+
+	config = mkIf cfg.enable {
+		nyxia.packages.neovim.enable = true;
+		nyxia.packages.firefox.enable = true;
+	
+	environment.systemPackages = with pkgs;[
+            kitty
+			spotify
+			vesktop
+        ];
+
+	};
+
 }
+

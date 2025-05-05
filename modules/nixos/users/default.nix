@@ -18,6 +18,7 @@ let
       "video"
       "sys"
       "audio"
+      "scanner"
       (mkIf (if builtins.hasAttr "isSudoUser" user then user.isSudoUser else false) "wheel")
     ];
 
