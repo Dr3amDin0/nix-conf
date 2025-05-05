@@ -2,6 +2,7 @@
 
 with lib;
 with lib.types;
+
 let
   cfg = config.nyxia.users;
 
@@ -17,9 +18,6 @@ let
       "video"
       "sys"
       "audio"
-      "optical"
-      "scanner"
-      "lp"
       (mkIf (if builtins.hasAttr "isSudoUser" user then user.isSudoUser else false) "wheel")
     ];
 

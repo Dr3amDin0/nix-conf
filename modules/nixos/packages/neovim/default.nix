@@ -2,12 +2,11 @@
 
 with lib;
 with lib.types;
+
 let
 	cfg = config.nyxia.packages.neovim;
-
 in
 {
-
 	options.nyxia.packages.neovim.enable = mkOption {
 		type = bool;
 		default = false;
@@ -22,5 +21,4 @@ in
 			vimAlias = true;
         };
     };
-
 }
