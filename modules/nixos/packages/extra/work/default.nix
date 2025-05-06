@@ -16,10 +16,7 @@ in
     nyxia.packages.work.enable = true;
 
     environment.systemPackages = with pkgs;[
-      hyprland
-      hyprpaper
-      hyprsunset
-      polybar
+      remmina
     ];
 
   };
