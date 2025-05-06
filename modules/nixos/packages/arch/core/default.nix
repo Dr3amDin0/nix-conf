@@ -17,7 +17,9 @@ in
 		nyxia.packages.firefox.enable = true;
 	
 	environment.systemPackages = with pkgs;[
+			openssh
             kitty
+			fish
 			spotify
 			vesktop
         ];
