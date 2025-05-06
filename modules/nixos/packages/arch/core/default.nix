@@ -18,7 +18,7 @@ in
 	
 	environment.systemPackages = with pkgs;[
 			openssh
-            kitty
+        	kitty
 			fish
 			spotify
 			vesktop
