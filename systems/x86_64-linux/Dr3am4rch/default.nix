@@ -1,61 +1,61 @@
-{config, pkgs, ...}:
+{ config, pkgs, ... }:
 
 {
-    imports =
-        [./hardware.nix];
+  imports =
+    [ ./hardware.nix ];
 
-        # load from namespace
-        nyxia = {
+  # load from namespace
+  nyxia = {
 
-            packages = {
-                # install core packages
-                core.enable = true;
-            };
+    packages = {
+      # install core packages
+      core.enable = true;
+    };
 
-            # create user
-            users = {
-                dream = {
-                    # user parameters
-                    isGuiUser = true;
-                    isSudoUser = true;
-                    isKvmUser = true;
-                    initialPassword = "kako";
-                    # edit git entry        
-                    git = {
-                        userName = "Dr3amDin0";
-                        userEmail = "github@dr3amdin0.com";
-                    };
-                };
-            };
+    # create user
+    users = {
+      dream = {
+        # user parameters
+        isGuiUser = true;
+        isSudoUser = true;
+        isKvmUser = true;
+        initialPassword = "kako";
+        # edit git entry        
+        git = {
+          userName = "Dr3amDin0";
+          userEmail = "github@dr3amdin0.com";
         };
+      };
+    };
+  };
 
-        # system configuration
-        system = {
-            nixos.label = "revision";
-            stateVersion = "25.05";
-        };
+  # system configuration
+  system = {
+    nixos.label = "revision";
+    stateVersion = "25.05";
+  };
 
-        # bootloader configuration
-        boot = {
-            loader.systemd-boot.enable = true;
-            loader.efi.canTouchEfiVariables = true;
-        };
+  # bootloader configuration
+  boot = {
+    loader.systemd-boot.enable = true;
+    loader.efi.canTouchEfiVariables = true;
+  };
 
-        # set timezone
-        time = {
-            timeZone = "Europe/Berlin";
-            hardwareClockInLocalTime = true;
-        };
+  # set timezone
+  time = {
+    timeZone = "Europe/Berlin";
+    hardwareClockInLocalTime = true;
+  };
 
-        # service configuration            
-        services = {
-            resolved.enable = true;
-        };
+  # service configuration            
+  services = {
+    resolved.enable = true;
+  };
 
-        # networking configuration
-        networking = {
-            networkmanager.enable = true;
-        };
+  # networking configuration
+  networking = {
+    networkmanager.enable = true;
+  };
 }
 
 
