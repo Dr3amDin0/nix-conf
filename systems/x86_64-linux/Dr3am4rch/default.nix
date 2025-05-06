@@ -10,6 +10,9 @@
     packages = {
       # install core packages
       core.enable = true;
+      gui.enable = true;
+      work.enable = true;
+      guitar.enable = true;
     };
 
     # create user

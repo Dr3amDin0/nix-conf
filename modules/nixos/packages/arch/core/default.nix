@@ -14,6 +14,7 @@ in
 
   config = mkIf cfg.enable {
     nyxia.packages.neovim.enable = true;
+    nyxia.packages.pipewire.enable = true;
 
     environment.systemPackages = with pkgs;[
       openssh
@@ -25,8 +26,6 @@ in
       protonup-qt
       firefox
     ];
-
   };
-
 }
 

@@ -4,20 +4,17 @@ with lib;
 with lib.types;
 
 let
-  cfg = config.nyxia.packages.gui;
+  cfg = config.nyxia.packages.work;
 in
 {
-  options.nyxia.packages.gui.enable = mkOption {
+  options.nyxia.packages.work.enable = mkOption {
     type = bool;
     default = false;
   };
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs;[
-      hyprland
-      hyprpaper
-      hyprsunset
-      polybar
+      remmina
     ];
   };
 }
