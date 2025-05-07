@@ -15,16 +15,19 @@ in
   config = mkIf cfg.enable {
     nyxia.packages.neovim.enable = true;
     nyxia.packages.pipewire.enable = true;
+    services.dbus.enable = true;
 
     environment.systemPackages = with pkgs;[
       openssh
+      steam
+      rofi
       alacritty
       fish
       spotify
       vesktop
-      steam
       protonup-qt
       firefox
+      vscode
     ];
   };
 }

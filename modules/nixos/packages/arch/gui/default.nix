@@ -18,6 +18,25 @@ in
       hyprpaper
       hyprsunset
       polybar
+      wayland
+      xwayland
+      xorg.xrdb
+      xsettingsd
     ];
-  };
+    xdg.portal= {
+    	enable = true;
+	extraPortals = with pkgs;[
+	#xdg-desktop-portal-gtk
+	xdg-desktop-portal-hyprland
+	];
+	};
+    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    programs.hyprland.xwayland.enable = true;
+  	hardware.graphics = {
+    	enable = true;
+	extraPackages = with pkgs;[
+		vpl-gpu-rt
+		];
+  	};
+};
 }

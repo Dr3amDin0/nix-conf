@@ -10,9 +10,10 @@
     packages = {
       # install core packages
       core.enable = true;
-      gui.enable = true;
+      plasma.enable = true;
       work.enable = true;
       guitar.enable = true;
+      nvidia.enable = true;
     };
 
     # create user
@@ -42,6 +43,7 @@
   boot = {
     loader.systemd-boot.enable = true;
     loader.efi.canTouchEfiVariables = true;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   # set timezone
