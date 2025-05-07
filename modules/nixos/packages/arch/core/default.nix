@@ -17,6 +17,9 @@ in
     nyxia.packages.pipewire.enable = true;
     services.dbus.enable = true;
 
+    programs.fish.enable = true;
+    users.defaultUserShell = pkgs.fish;
+
     programs.steam = {
       enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -34,7 +37,7 @@ in
       protonup-qt
       firefox
       vscode
-      font-awesome
+      fira-code-nerdfont
     ];
   };
 }

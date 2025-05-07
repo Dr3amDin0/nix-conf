@@ -27,8 +27,15 @@ in
       playerctl
       gtk3
       mesa
-      uwsm
+      libappindicator-gtk3
+      ly
     ];
+
+    fonts.packages = with pkgs; [
+      font-awesome
+	fira-code-nerdfont
+    ];
+
     xdg.portal= {
     	enable = true;
 	extraPortals = with pkgs;[
