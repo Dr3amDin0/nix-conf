@@ -10,11 +10,13 @@
     packages = {
       # install core packages
       core.enable = true;
+      gui.enable = true;
       plasma.enable = true;
       work.enable = true;
       guitar.enable = true;
       nvidia.enable = true;
     };
+	
 
     # create user
     users = {

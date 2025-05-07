@@ -17,11 +17,17 @@ in
       hyprland
       hyprpaper
       hyprsunset
-      polybar
+      waybar
       wayland
       xwayland
       xorg.xrdb
       xsettingsd
+      gamescope
+      alsa-scarlett-gui
+      playerctl
+      gtk3
+      mesa
+      uwsm
     ];
     xdg.portal= {
     	enable = true;
