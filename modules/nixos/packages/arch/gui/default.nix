@@ -17,6 +17,7 @@ in
       hyprland
       hyprpaper
       hyprsunset
+      hyprcursor
       waybar
       wayland
       xwayland
@@ -28,7 +29,6 @@ in
       gtk3
       mesa
       libappindicator-gtk3
-      ly
     ];
 
     fonts.packages = with pkgs; [

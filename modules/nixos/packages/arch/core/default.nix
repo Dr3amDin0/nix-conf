@@ -33,12 +33,12 @@ in
       alacritty
       fish
       spotify
+      spicetify-cli
       vesktop
       protonup-qt
       firefox
       vscode
       fira-code-nerdfont
-      easyeffects
       pwvucontrol
     ];
   };
