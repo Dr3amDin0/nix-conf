@@ -38,6 +38,8 @@ in
       firefox
       vscode
       fira-code-nerdfont
+      easyeffects
+      pwvucontrol
     ];
   };
 }
