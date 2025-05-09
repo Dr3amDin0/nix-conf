@@ -17,7 +17,7 @@ in
       enable = true; # if not already enabled
       alsa.enable = true;
       alsa.support32Bit = true;
-      #pulse.enable = true;
+      pulse.enable = true;
       # If you want to use JACK applications, uncomment this
       jack.enable = true;
     };
@@ -27,9 +27,25 @@ in
     ];
 
     services.pipewire.extraConfig.pipewire."20-pulse-properties.conf" = {
-      "pulse.min.req" = "64/48000";
-      "pulse.min.frag" = "64/48000";
-      "pulse.min.quantum" = "64/48000";
+    "context.properties" = {
+      name = "libpipewire-module-protocol-pulse";
+      args = { };
+      "default.clock.rate" = 48000;
+      "default.clock.quantum" = 32;
+      "default.clock.min-quantum" = 32;
+      "default.clock.max-quantum" = 32;
+      "session.suspend-timeout-seconds" = 0;
+      "node.always-process" = true;
+    };
+    "pulse.properties" = {
+    "pulse.min.req" = "128/48000";
+    "pulse.min.frag" = "128/48000";
+    "pulse.min.quantum" = "128/48000";
+    "pulse.default.frag" = "96/48000";
+    "pulse.default.tlength" = "96/48000";
+    "pulse.fix.format" = "S16LE";
+    "pulse.idle.timeout" = "0";
+    };
     };
   };
 }
