@@ -16,7 +16,7 @@
       guitar.enable = true;
       nvidia.enable = true;
     };
-	
+
 
     # create user
     users = {
@@ -34,6 +34,8 @@
       };
     };
   };
+
+  nixpkgs.config.allowUnfree = true;
 
   # system configuration
   system = {

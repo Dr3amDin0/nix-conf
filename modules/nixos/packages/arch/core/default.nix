@@ -39,7 +39,7 @@ in
       firefox
       vscode
       fira-code-nerdfont
-      pwvucontrol
+      ranger
     ];
   };
 }

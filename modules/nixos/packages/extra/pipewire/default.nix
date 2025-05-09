@@ -1,4 +1,4 @@
-{ options, config, lib, ... }:
+{ options, config, lib, pkgs, ... }:
 
 with lib;
 with lib.types;
@@ -10,6 +10,7 @@ in
     type = bool;
     default = false;
   };
+
   config = mkIf cfg.enable {
     security.rtkit.enable = true;
     services.pipewire = {
@@ -20,6 +21,10 @@ in
       # If you want to use JACK applications, uncomment this
       jack.enable = true;
     };
+
+    environment.systemPackages = with pkgs;[
+      pwvucontrol
+    ];
 
     services.pipewire.extraConfig.pipewire."20-pulse-properties.conf" = {
       "pulse.min.req" = "64/48000";

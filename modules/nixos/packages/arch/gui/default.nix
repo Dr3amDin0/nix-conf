@@ -33,23 +33,23 @@ in
 
     fonts.packages = with pkgs; [
       font-awesome
-	fira-code-nerdfont
+      fira-code-nerdfont
     ];
 
-    xdg.portal= {
-    	enable = true;
-	extraPortals = with pkgs;[
-	#xdg-desktop-portal-gtk
-	xdg-desktop-portal-hyprland
-	];
-	};
+    xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs;[
+        #xdg-desktop-portal-gtk
+        xdg-desktop-portal-hyprland
+      ];
+    };
     environment.sessionVariables.NIXOS_OZONE_WL = "1";
     programs.hyprland.xwayland.enable = true;
-  	hardware.graphics = {
-    	enable = true;
-	extraPackages = with pkgs;[
-		vpl-gpu-rt
-		];
-  	};
-};
+    hardware.graphics = {
+      enable = true;
+      extraPackages = with pkgs;[
+        vpl-gpu-rt
+      ];
+    };
+  };
 }
