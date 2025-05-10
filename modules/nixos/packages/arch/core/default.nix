@@ -40,6 +40,7 @@ in
       vscode
       fira-code-nerdfont
       ranger
+      btop
     ];
   };
 }
