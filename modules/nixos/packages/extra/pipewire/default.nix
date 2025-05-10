@@ -27,25 +27,24 @@ in
     ];
 
     services.pipewire.extraConfig.pipewire."20-pulse-properties.conf" = {
-    "context.properties" = {
-      name = "libpipewire-module-protocol-pulse";
-      args = { };
-      "default.clock.rate" = 48000;
-      "default.clock.quantum" = 32;
-      "default.clock.min-quantum" = 32;
-      "default.clock.max-quantum" = 32;
-      "session.suspend-timeout-seconds" = 0;
-      "node.always-process" = true;
-    };
-    "pulse.properties" = {
-    "pulse.min.req" = "128/48000";
-    "pulse.min.frag" = "128/48000";
-    "pulse.min.quantum" = "128/48000";
-    "pulse.default.frag" = "96/48000";
-    "pulse.default.tlength" = "96/48000";
-    "pulse.fix.format" = "S16LE";
-    "pulse.idle.timeout" = "0";
-    };
+      "context.properties" = {
+        name = "libpipewire-module-protocol-pulse";
+        args = { };
+        "default.clock.rate" = 48000;
+        "default.clock.quantum" = 48;
+        "default.clock.min-quantum" = 48;
+        "default.clock.max-quantum" = 48;
+        "session.suspend-timeout-seconds" = 0;
+      };
+      "pulse.properties" = {
+        "pulse.min.req" = "128/48000";
+        "pulse.min.frag" = "128/48000";
+        "pulse.min.quantum" = "128/48000";
+        "pulse.default.frag" = "96/48000";
+        "pulse.default.tlength" = "96/48000";
+        "pulse.fix.format" = "S16LE";
+        "pulse.idle.timeout" = "0";
+      };
     };
   };
 }

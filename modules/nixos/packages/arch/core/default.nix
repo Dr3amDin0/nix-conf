@@ -38,7 +38,6 @@ in
       protonup-qt
       firefox
       vscode
-      fira-code-nerdfont
       ranger
       btop
     ];
