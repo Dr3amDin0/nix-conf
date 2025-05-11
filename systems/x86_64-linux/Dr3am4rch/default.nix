@@ -17,7 +17,6 @@
       nvidia.enable = true;
     };
 
-
     # create user
     users = {
       dream = {
@@ -34,8 +33,6 @@
       };
     };
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   # system configuration
   system = {

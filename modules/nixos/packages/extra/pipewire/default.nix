@@ -31,9 +31,9 @@ in
         name = "libpipewire-module-protocol-pulse";
         args = { };
         "default.clock.rate" = 48000;
-        "default.clock.quantum" = 48;
-        "default.clock.min-quantum" = 48;
-        "default.clock.max-quantum" = 48;
+        "default.clock.quantum" = 64;
+        "default.clock.min-quantum" = 64;
+        "default.clock.max-quantum" = 64;
         "session.suspend-timeout-seconds" = 0;
       };
       "pulse.properties" = {
