@@ -26,14 +26,26 @@ in
       gamescope
       alsa-scarlett-gui
       playerctl
-      gtk3
       mesa
+
+      #Add GTK
+      gtk3
+      gtk4
+
+      #GTK Theme Packages and Libraries
+      adwaita-icon-theme
+      gnome-themes-extra
+      hicolor-icon-theme
+      libadwaita
       libappindicator-gtk3
     ];
 
+    #Adding Fonts
     fonts.packages = with pkgs; [
       font-awesome
       fira-code-nerdfont
+      noto-fonts
+      noto-fonts-emoji
     ];
 
     xdg.portal = {

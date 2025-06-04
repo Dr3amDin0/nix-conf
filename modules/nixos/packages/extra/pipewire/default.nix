@@ -24,10 +24,14 @@ in
 
     environment.systemPackages = with pkgs;[
       pwvucontrol
-      swh-plugins
-      calf
+      easyeffects
+      lsp-plugins
       zam-plugins
+      calf
+      swh-plugins
     ];
+
+    programs.easyeffects.enable = true;
 
     services.pipewire.extraConfig.pipewire."20-pulse-properties.conf" = {
       "context.properties" = {
