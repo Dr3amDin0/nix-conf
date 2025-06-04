@@ -17,6 +17,8 @@ in
     nyxia.packages.pipewire.enable = true;
     services.dbus.enable = true;
 
+    services.upower.enable = true;
+
     programs.fish.enable = true;
     users.defaultUserShell = pkgs.fish;
 
@@ -29,17 +31,18 @@ in
 
     environment.systemPackages = with pkgs;[
       openssh
+      gamemode
       rofi
       alacritty
       fish
-      spotify
+      tidal-hifi
       vesktop
       protonup-qt
+      prismlauncher
       firefox
       vscode
       ranger
       btop
-      cli-visualizer
       anki
     ];
   };

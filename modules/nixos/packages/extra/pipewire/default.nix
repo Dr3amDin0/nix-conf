@@ -24,6 +24,9 @@ in
 
     environment.systemPackages = with pkgs;[
       pwvucontrol
+      swh-plugins
+      calf
+      zam-plugins
     ];
 
     services.pipewire.extraConfig.pipewire."20-pulse-properties.conf" = {
