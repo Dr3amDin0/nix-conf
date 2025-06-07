@@ -40,7 +40,6 @@ in
       protonup-qt
       prismlauncher
       firefox
-      vscode
       ranger
       btop
       anki
