@@ -17,6 +17,9 @@ in
       vscode
       rustc
       cargo
+      rustfmt
+      clippy
+      rust-analyzer
     ];
   };
 }
