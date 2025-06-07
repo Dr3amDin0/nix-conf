@@ -39,7 +39,7 @@ in
       vesktop
       protonup-qt
       prismlauncher
-      vivaldi
+      firefox
       ranger
       btop
       anki

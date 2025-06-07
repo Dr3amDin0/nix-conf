@@ -14,7 +14,7 @@ in
 
   config = mkIf cfg.enable {
     environment.systemPackages = with pkgs;[
-      vscode
+      jetbrains.rust-rover
       rustc
       cargo
       rustfmt
