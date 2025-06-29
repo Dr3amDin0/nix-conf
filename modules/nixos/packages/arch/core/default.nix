@@ -36,6 +36,7 @@ in
       alacritty
       fish
       tidal-hifi
+	  spotify
       vesktop
       protonup-qt
       prismlauncher
