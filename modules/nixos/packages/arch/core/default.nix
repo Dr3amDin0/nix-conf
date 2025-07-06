@@ -42,6 +42,7 @@ in
       prismlauncher
       firefox
       ranger
+	  w3m
       btop
       anki
     ];
