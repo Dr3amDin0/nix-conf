@@ -13,14 +13,11 @@ in
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs;[
+	environment.systemPackages = with pkgs;[
       jetbrains.rust-rover
-      rustc
-      cargo
-      rustfmt
-      clippy
       rustup
-      rust-analyzer
+	  gcc
+	  xorg.libX11
     ];
   };
 }
