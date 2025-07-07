@@ -17,7 +17,6 @@ in
       jetbrains.rust-rover
       rustup
 	  gcc
-	  xorg.libX11
     ];
   };
 }
