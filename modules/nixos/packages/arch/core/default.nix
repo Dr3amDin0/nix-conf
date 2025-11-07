@@ -35,7 +35,7 @@ in
       rofi
       alacritty
       fish
-      tidal-hifi
+      virtualbox
 	  spotify
       vesktop
       protonup-qt
