@@ -38,7 +38,7 @@
   # system configuration
   system = {
     nixos.label = "revision";
-    stateVersion = "25.05";
+    stateVersion = "25.11";
   };
 
   # bootloader configuration

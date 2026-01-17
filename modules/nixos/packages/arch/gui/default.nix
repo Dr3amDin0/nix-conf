@@ -43,9 +43,9 @@ in
     #Adding Fonts
     fonts.packages = with pkgs; [
       font-awesome
-      fira-code-nerdfont
+      nerd-fonts.fira-code
       noto-fonts
-      noto-fonts-emoji
+      noto-fonts-color-emoji
     ];
 
     xdg.portal = {

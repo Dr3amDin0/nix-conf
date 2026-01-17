@@ -35,7 +35,6 @@ in
       rofi
       alacritty
       fish
-      virtualbox
 	  spotify
       vesktop
       protonup-qt
@@ -44,6 +43,9 @@ in
       ranger
       btop
       obsidian
+	  wakeonlan
+	  unzip
+	  multiviewer-for-f1
     ];
   };
 }

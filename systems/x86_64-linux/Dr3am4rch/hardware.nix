@@ -13,6 +13,7 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "vboxdrv" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.guest.enable = true;
 
