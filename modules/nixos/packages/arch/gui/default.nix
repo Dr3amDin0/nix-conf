@@ -56,7 +56,7 @@ in
         xdg-desktop-portal-hyprland
       ];
     };
-    environment.sessionVariables.NIXOS_OZONE_WL = "1";
+    #environment.sessionVariables.NIXOS_OZONE_WL = "1";
     programs.hyprland.xwayland.enable = true;
     hardware.graphics = {
       enable = true;
