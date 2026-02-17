@@ -52,7 +52,7 @@ let
       enable = true;
       createDirectories = true;
       extraConfig = {
-        XDG_GITHUB_DIR = "${config.home-manager.users.${name}.home.homeDirectory}/GitHub";
+        GITHUB = "${config.home-manager.users.${name}.home.homeDirectory}/GitHub";
       };
     };
 

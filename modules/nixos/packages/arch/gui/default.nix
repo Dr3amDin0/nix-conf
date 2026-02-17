@@ -18,10 +18,11 @@ in
       hyprpaper
       hyprsunset
       hyprcursor
+	  waytrogen
       waybar
       wayland
       xwayland
-      xorg.xrdb
+      xrdb
       xsettingsd
       gamescope
       alsa-scarlett-gui

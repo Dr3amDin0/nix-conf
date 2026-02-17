@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d5968d23-d49f-44c4-aaa6-b8df19181634" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flake.lock" beforeDir="false" afterPath="$PROJECT_DIR$/flake.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/nixos/packages/arch/core/default.nix" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nixos/packages/arch/core/default.nix" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/nixos/packages/arch/gui/default.nix" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nixos/packages/arch/gui/default.nix" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/nixos/packages/arch/gui/display/nvidia/default.nix" beforeDir="false" afterPath="$PROJECT_DIR$/modules/nixos/packages/arch/gui/display/nvidia/default.nix" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/systems/x86_64-linux/Dr3am4rch/hardware.nix" beforeDir="false" afterPath="$PROJECT_DIR$/systems/x86_64-linux/Dr3am4rch/hardware.nix" afterDir="false" />
-    </list>
+    <list default="true" id="d5968d23-d49f-44c4-aaa6-b8df19181634" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,23 +24,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/etc/nixos&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/etc/nixos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.first.attach.projects": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="/run/current-system/sw/bin" />
   </component>
@@ -60,6 +55,7 @@
       <updated>1749377172050</updated>
       <workItem from="1749377173072" duration="1473000" />
       <workItem from="1764268486127" duration="479000" />
+      <workItem from="1769704690882" duration="5000" />
     </task>
     <servers />
   </component>

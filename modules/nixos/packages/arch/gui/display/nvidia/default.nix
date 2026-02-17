@@ -29,11 +29,11 @@ in
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
       #Sets the Nvidia Driver thing 
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
       #Required as per https://nixos.wiki/wiki/Nvidia
       modesetting.enable = true;
       powerManagement.enable = false;
-      open = true;
+	  open = true;
       nvidiaSettings = true;
     };
   };
