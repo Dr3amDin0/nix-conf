@@ -45,6 +45,7 @@
     loader.systemd-boot.enable = false;
 	loader.grub.enable = false;
 	loader.limine.enable = true;
+	loader.limine.secureBoot.enable = true;
     loader.efi.canTouchEfiVariables = true;
     kernelPackages = pkgs.linuxPackages_6_18;
   };
