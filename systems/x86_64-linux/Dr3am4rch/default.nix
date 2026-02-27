@@ -42,7 +42,9 @@
 
   # bootloader configuration
   boot = {
-    loader.systemd-boot.enable = true;
+    loader.systemd-boot.enable = false;
+	loader.grub.enable = false;
+	loader.limine.enable = true;
     loader.efi.canTouchEfiVariables = true;
     kernelPackages = pkgs.linuxPackages_6_18;
   };

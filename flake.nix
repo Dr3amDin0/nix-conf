@@ -29,15 +29,6 @@
 
       channels-config = {
         allowUnfree = true;
-      };
-
-	  nixosModules = [
-  		({ 	config, pkgs, ... }: {
-    	boot.loader.limine.enable = true;
-		boot.loader.limine.secureBoot.enable = true;
-    	boot.loader.grub.enable = false; # optional
-		boot.loader.systemd-boot.enable = false;
-  			})
-  		];
+    	};
 	};
 }
