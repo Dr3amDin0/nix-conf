@@ -36,6 +36,7 @@
     	boot.loader.limine.enable = true;
 		boot.loader.limine.secureBoot.enable = true;
     	boot.loader.grub.enable = false; # optional
+		boot.loader.systemd-boot.enable = false;
   			})
   		];
 	};
