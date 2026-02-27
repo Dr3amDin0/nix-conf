@@ -46,6 +46,7 @@ in
 	  wakeonlan
 	  unzip
 	  multiviewer-for-f1
+	  sbctl
     ];
   };
 }
