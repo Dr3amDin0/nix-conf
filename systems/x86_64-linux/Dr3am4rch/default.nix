@@ -12,7 +12,6 @@
       core.enable = true;
       gui.enable = true;
       plasma.enable = true;
-      guitar.enable = true;
       nvidia.enable = true;
       programming.enable = true;
     };
@@ -47,6 +46,12 @@
 	loader.limine.enable = true;
 	loader.limine.secureBoot.enable = true;
     loader.efi.canTouchEfiVariables = true;
+
+	loader.limine.extraEntries = ''
+	/ Windows 11
+		protocol: efi
+		path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
+	'';
     kernelPackages = pkgs.linuxPackages_6_18;
   };
 
