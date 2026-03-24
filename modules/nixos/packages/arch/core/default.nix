@@ -47,6 +47,7 @@ in
 	  unzip
 	  multiviewer-for-f1
 	  sbctl
+	  pinta
     ];
   };
 }
