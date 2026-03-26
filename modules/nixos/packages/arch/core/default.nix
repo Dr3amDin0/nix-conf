@@ -48,6 +48,7 @@ in
 	  multiviewer-for-f1
 	  sbctl
 	  pinta
+	  teamspeak6-client
     ];
   };
 }

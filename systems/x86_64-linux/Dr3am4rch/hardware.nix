@@ -9,11 +9,11 @@
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "r8169" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "vboxdrv" ];
+  boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
-  boot.kernelParams = [ "kvm.enable_virt_at_load=0" ];
+  boot.kernelParams = [ ];
 
   fileSystems."/" =
     {
@@ -62,13 +62,5 @@
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-
-  hardware.bluetooth.settings = {
-    General = {
-      Experimental = true;
-    };
-  };
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
 }
