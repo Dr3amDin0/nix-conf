@@ -38,6 +38,7 @@ in
 	  spotify
       vesktop
       protonup-qt
+	  protontricks
       prismlauncher
       firefox
       ranger
@@ -48,7 +49,6 @@ in
 	  multiviewer-for-f1
 	  sbctl
 	  pinta
-	  teamspeak6-client
     ];
   };
 }
