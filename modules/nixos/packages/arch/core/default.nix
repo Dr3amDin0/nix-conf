@@ -49,6 +49,7 @@ in
 	  multiviewer-for-f1
 	  sbctl
 	  pinta
+	  remmina
     ];
   };
 }
