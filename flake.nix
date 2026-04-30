@@ -1,13 +1,12 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+	tidaLuna.url = "github:Inrixia/TidaLuna";
 
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-	inputs.tidaLuna.url = "github:Inrixia/TidaLuna"
 
     snowfall-lib = {
       url = "github:snowfallorg/lib";

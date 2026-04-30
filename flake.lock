@@ -89,11 +89,28 @@
         "type": "github"
       }
     },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1768875095,
+        "narHash": "sha256-dYP3DjiL7oIiiq3H65tGIXXIT1Waiadmv93JS0sS+8A=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ed142ab1b3a092c4d149245d0c4126a5d7ea00b0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixpkgs-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "snowfall-lib": "snowfall-lib"
+        "snowfall-lib": "snowfall-lib",
+        "tidaLuna": "tidaLuna"
       }
     },
     "snowfall-lib": {
@@ -130,6 +147,24 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "tidaLuna": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1775724179,
+        "narHash": "sha256-KDeM1qe7Qgta+SG4JDtVpZwe3jnzmMJuausNpL5Kdxw=",
+        "owner": "Inrixia",
+        "repo": "TidaLuna",
+        "rev": "2b1a5a8ee3f4a19300ffdbcfba1d9c506b65682f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Inrixia",
+        "repo": "TidaLuna",
         "type": "github"
       }
     }
