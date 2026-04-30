@@ -50,7 +50,7 @@ in
 	  sbctl
 	  pinta
 	  remmina
-	  inputs.tidaLuna.packages.${stdenv.hostPlatform.system}.default
+	  tidal-hifi
     ];
   };
 }
