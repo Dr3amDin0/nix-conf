@@ -22,6 +22,8 @@ in
     programs.fish.enable = true;
     users.defaultUserShell = pkgs.fish;
 
+	inputs.tidaLuna.url = "github:Inrixia/TidaLuna"
+
     programs.steam = {
       enable = true;
       remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
@@ -35,7 +37,6 @@ in
       rofi
       alacritty
       fish
-	  spotify
       vesktop
       protonup-qt
 	  protontricks
@@ -50,6 +51,7 @@ in
 	  sbctl
 	  pinta
 	  remmina
+	  inputs.tidaLuna.packages.${stdenv.hostPlatform.system}.default
     ];
   };
 }
