@@ -34,6 +34,7 @@ in
       gamemode
       rofi
       alacritty
+	  kitty
       fish
       vesktop
       protonup-qt
