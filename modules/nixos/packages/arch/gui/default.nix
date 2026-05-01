@@ -18,6 +18,7 @@ in
       hyprpaper
       hyprsunset
       hyprcursor
+	  hyprsome
 	  waytrogen
       waybar
       wayland
