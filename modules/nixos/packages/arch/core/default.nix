@@ -13,7 +13,6 @@ in
   };
 
   config = mkIf cfg.enable {
-    nyxia.packages.neovim.enable = true;
     nyxia.packages.pipewire.enable = true;
     services.dbus.enable = true;
 
