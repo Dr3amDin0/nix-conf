@@ -29,6 +29,7 @@ in
       lua51Packages.luarocks
       lua51Packages.lua
       lua
+      statix
     ];
   };
 }
