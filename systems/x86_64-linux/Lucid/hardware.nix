@@ -7,8 +7,9 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
+  boot.kernelModules = [ "kvm-intel" "thinkpad_acpi" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "i915.enable_dpcd_backlight=0"];
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/ae58b3d0-f59d-4216-9e83-1b0f3902d010";

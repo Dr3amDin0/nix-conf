@@ -46,6 +46,7 @@ in
       pinta
       remmina
       tidal-hifi
+      brightnessctl
     ];
   };
 }

@@ -40,7 +40,7 @@
   # bootloader configuration
   boot = {
     loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
+    loader.efi.canTouchEfiVariables = true;
   };
 
   # set timezone
