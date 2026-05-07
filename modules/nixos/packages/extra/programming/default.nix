@@ -13,10 +13,22 @@ in
   };
 
   config = mkIf cfg.enable {
-	environment.systemPackages = with pkgs;[
-      jetbrains.rust-rover
-      rustup
-	  gcc
+    programs.nix-ld.enable = true;
+    programs.neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+    };
+    environment.systemPackages = with pkgs;[
+      rustc
+      cargo
+      gcc
+      rust-analyzer
+      rustfmt
+      lua51Packages.luarocks
+      lua51Packages.lua
+      lua
     ];
   };
 }

@@ -28,29 +28,29 @@ in
       dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
       localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
     };
-	#test
+    #test
     environment.systemPackages = with pkgs;[
       openssh
       gamemode
       rofi
       alacritty
-	  kitty
+      kitty
       fish
       vesktop
       protonup-qt
-	  protontricks
+      protontricks
       prismlauncher
       firefox
       ranger
       btop
       obsidian
-	  wakeonlan
-	  unzip
-	  multiviewer-for-f1
-	  sbctl
-	  pinta
-	  remmina
-	  tidal-hifi
+      wakeonlan
+      unzip
+      multiviewer-for-f1
+      sbctl
+      pinta
+      remmina
+      tidal-hifi
     ];
   };
 }

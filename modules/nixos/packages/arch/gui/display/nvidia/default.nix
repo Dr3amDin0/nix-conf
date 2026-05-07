@@ -33,7 +33,7 @@ in
       #Required as per https://nixos.wiki/wiki/Nvidia
       modesetting.enable = true;
       powerManagement.enable = false;
-	  open = true;
+      open = true;
       nvidiaSettings = true;
     };
   };

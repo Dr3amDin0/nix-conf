@@ -11,7 +11,6 @@
       # install core packages
       core.enable = true;
       gui.enable = true;
-      plasma.enable = true;
       nvidia.enable = true;
       programming.enable = true;
     };
@@ -42,16 +41,16 @@
   # bootloader configuration
   boot = {
     loader.systemd-boot.enable = false;
-	loader.grub.enable = false;
-	loader.limine.enable = true;
-	loader.limine.secureBoot.enable = true;
+    loader.grub.enable = false;
+    loader.limine.enable = true;
+    loader.limine.secureBoot.enable = true;
     loader.efi.canTouchEfiVariables = true;
 
-	loader.limine.extraEntries = ''
-	/ Windows 11
-		protocol: efi
-		path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
-	'';
+    loader.limine.extraEntries = ''
+      	/ Windows 11
+      		protocol: efi
+      		path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
+      	'';
     kernelPackages = pkgs.linuxPackages_6_18;
   };
 
@@ -70,11 +69,9 @@
   networking = {
     networkmanager.enable = true;
     nameservers = [
-  "1.1.1.1"
-  "1.0.0.1"
-  "8.8.8.8"
-  "8.8.4.4"
-  ];
+      "1.1.1.1"
+      "8.8.8.8"
+    ];
   };
 }
 

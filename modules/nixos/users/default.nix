@@ -38,11 +38,11 @@ let
     # Git Config
     programs.git = mkIf (if builtins.hasAttr "git" user then true else false) {
       enable = true;
-      
-	  settings = {
+
+      settings = {
         user.name = user.git.userName;
-		user.email = user.git.userEmail;
-		safe.directory = "/etc/nixos";
+        user.email = user.git.userEmail;
+        safe.directory = "/etc/nixos";
         pager.branch = false;
       };
     };

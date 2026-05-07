@@ -29,6 +29,6 @@
 
       channels-config = {
         allowUnfree = true;
-    	};
-	};
+      };
+    };
 }

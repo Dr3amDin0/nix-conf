@@ -16,17 +16,15 @@ in
     environment.systemPackages = with pkgs;[
       hyprland
       hyprpaper
-      hyprsunset
       hyprcursor
-	  hyprsome
-	  waytrogen
+      hyprsome
+      waytrogen
       waybar
       wayland
       xwayland
       xrdb
       xsettingsd
       gamescope
-      alsa-scarlett-gui
       playerctl
       mesa
 
