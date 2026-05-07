@@ -33,20 +33,16 @@ in
       openssh
       gamemode
       rofi
-      alacritty
       kitty
       fish
       vesktop
       protonup-qt
       protontricks
-      prismlauncher
       firefox
       ranger
       btop
       obsidian
-      wakeonlan
       unzip
-      multiviewer-for-f1
       sbctl
       pinta
       remmina
