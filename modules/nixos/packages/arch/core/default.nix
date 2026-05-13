@@ -30,6 +30,7 @@ in
     #test
     environment.systemPackages = with pkgs;[
       openssh
+      fastfetch
       gamemode
       rofi
       kitty
