@@ -51,7 +51,7 @@
       		protocol: efi
       		path: boot():/EFI/Microsoft/Boot/bootmgfw.efi
       	'';
-    kernelPackages = pkgs.linuxPackages_6_18;
+    kernelPackages = pkgs.linuxPackages_latest;
   };
 
   # set timezone
