@@ -9,12 +9,12 @@
       (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "r8169" ];
-  boot.initrd.kernelModules = [ "r8169" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "usb_storage" "sd_mod" "r8168" ];
+  boot.initrd.kernelModules = [ "r8168" ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
   boot.kernelParams = [ ];
-  boot.blacklistedKernelModules = [ "mt7921e" ];
+  boot.blacklistedKernelModules = [ "mt7921e" "r8169" ];
   boot.kernel.sysctl."net.ipv6.conf.eth0.disable_ipv6" = true;
 
   fileSystems."/" =
