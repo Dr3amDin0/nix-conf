@@ -20,7 +20,6 @@ in
       hyprsome
       waytrogen
       waybar
-      wayland
       xwayland
       xrdb
       xsettingsd
@@ -50,11 +49,11 @@ in
 
     xdg.portal = {
       enable = true;
-      config.common.default = "*";
       extraPortals = with pkgs;[
-        #xdg-desktop-portal-gtk
+        xdg-desktop-portal-gtk
         xdg-desktop-portal-hyprland
       ];
+      config.common.default = "hyprland";
     };
     #environment.sessionVariables.NIXOS_OZONE_WL = "1";
     programs.hyprland.xwayland.enable = true;
