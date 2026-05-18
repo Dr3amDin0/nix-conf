@@ -45,9 +45,8 @@ in
       unzip
       sbctl
       pinta
-      remmina
+      dolphin-emu
       tidal-hifi
-      brightnessctl
     ];
   };
 }
