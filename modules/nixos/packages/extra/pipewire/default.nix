@@ -1,57 +1,71 @@
 { options, config, lib, pkgs, ... }:
 
 with lib;
-with lib.types;
 
 let
   cfg = config.nyxia.packages.pipewire;
 in
 {
   options.nyxia.packages.pipewire.enable = mkOption {
-    type = bool;
+    type = types.bool;
     default = false;
   };
 
   config = mkIf cfg.enable {
     security.rtkit.enable = true;
 
+    services.dbus.enable = true;
+
     services.pipewire = {
       enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
+
+      alsa = {
+        enable = true;
+        support32Bit = true;
+      };
+
       pulse.enable = true;
+
+      wireplumber.enable = true;
+
+      extraConfig = {
+        pipewire."10-clock.conf" = {
+          "context.properties" = {
+            # Lock everything to one rate
+            "default.clock.rate" = 48000;
+            "default.clock.allowed-rates" = [ 48000 ];
+
+            # Stable quantum for gaming + discord together
+            "default.clock.quantum" = 1024;
+            "default.clock.min-quantum" = 1024;
+            "default.clock.max-quantum" = 1024;
+          };
+        };
+
+        pipewire-pulse."20-pulse-properties.conf" = {
+          "pulse.properties" = {
+            "pulse.fix.format" = "S16LE";
+
+            # Stable buffering
+            "pulse.default.req" = "1024/48000";
+            "pulse.default.frag" = "1024/48000";
+            "pulse.default.tlength" = "1024/48000";
+
+            "pulse.min.req" = "1024/48000";
+            "pulse.min.quantum" = "1024/48000";
+
+            # Prevent device suspend weirdness
+            "session.suspend-timeout-seconds" = 0;
+            "pulse.idle.timeout" = 0;
+          };
+        };
+      };
     };
-
-    services.pipewire.wireplumber.enable = true;
-
-    services.dbus.enable = true;
 
     environment.systemPackages = with pkgs; [
       pwvucontrol
-      easyeffects
-      zam-plugins
-      calf
-      swh_lv2
       dconf
       dbus
     ];
-
-    services.pipewire.extraConfig.pipewire."20-pulse-properties.conf" = {
-      "context.properties" = {
-        name = "libpipewire-module-protocol-pulse";
-        args = { };
-        "default.clock.rate" = 48000;
-        "session.suspend-timeout-seconds" = 0;
-      };
-      "pulse.properties" = {
-        "pulse.min.req" = "1024/48000";
-        "pulse.min.frag" = "1024/48000";
-        "pulse.min.quantum" = "1024/48000";
-        "pulse.default.frag" = "1024/48000";
-        "pulse.default.tlength" = "1024/48000";
-        "pulse.fix.format" = "S16LE";
-        "pulse.idle.timeout" = "0";
-      };
-    };
   };
 }

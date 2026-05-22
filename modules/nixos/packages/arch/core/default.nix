@@ -46,7 +46,9 @@ in
       sbctl
       pinta
       dolphin-emu
+      wheelwizard
       tidal-hifi
+      osu-lazer-bin
     ];
   };
 }
