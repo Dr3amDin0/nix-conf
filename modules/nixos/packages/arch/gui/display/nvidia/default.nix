@@ -1,8 +1,8 @@
-# Enable the Nvidia Drivers 
 { options, config, lib, pkgs, ... }:
 
 with lib;
 with lib.types;
+
 let
   cfg = config.nyxia.packages.nvidia;
 in
@@ -15,25 +15,33 @@ in
   config = mkIf cfg.enable {
     hardware.graphics = {
       enable = true;
+
       extraPackages = with pkgs; [
         libva-vdpau-driver
         libvdpau-va-gl
       ];
+
       extraPackages32 = with pkgs.pkgsi686Linux; [
         libva-vdpau-driver
       ];
     };
-    environment.systemPackages = with pkgs;[
+
+    environment.systemPackages = with pkgs; [
       nvtopPackages.nvidia
     ];
+
     services.xserver.videoDrivers = [ "nvidia" ];
+
     hardware.nvidia = {
-      #Sets the Nvidia Driver thing 
-      package = config.boot.kernelPackages.nvidiaPackages.beta;
-      #Required as per https://nixos.wiki/wiki/Nvidia
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
+
       modesetting.enable = true;
-      powerManagement.enable = false;
-      open = true;
+
+      open = false;
+
+      powerManagement.enable = true;
+      powerManagement.finegrained = false;
+
       nvidiaSettings = true;
     };
   };
