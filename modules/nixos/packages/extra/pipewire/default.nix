@@ -29,32 +29,28 @@ in
       wireplumber.enable = true;
 
       extraConfig = {
+        # Stable global audio clock
         pipewire."10-clock.conf" = {
           "context.properties" = {
-            # Lock everything to one rate
             "default.clock.rate" = 48000;
             "default.clock.allowed-rates" = [ 48000 ];
-
-            # Stable quantum for gaming + discord together
-            "default.clock.quantum" = 1024;
-            "default.clock.min-quantum" = 1024;
-            "default.clock.max-quantum" = 1024;
           };
         };
 
+        # PulseAudio compatibility layer
         pipewire-pulse."20-pulse-properties.conf" = {
           "pulse.properties" = {
             "pulse.fix.format" = "S16LE";
 
-            # Stable buffering
+            # Stable shared-mode buffering
             "pulse.default.req" = "1024/48000";
             "pulse.default.frag" = "1024/48000";
             "pulse.default.tlength" = "1024/48000";
 
-            "pulse.min.req" = "1024/48000";
-            "pulse.min.quantum" = "1024/48000";
+            "pulse.min.req" = "512/48000";
+            "pulse.min.quantum" = "512/48000";
 
-            # Prevent device suspend weirdness
+            # Prevent suspend-related crackles/pops
             "session.suspend-timeout-seconds" = 0;
             "pulse.idle.timeout" = 0;
           };
