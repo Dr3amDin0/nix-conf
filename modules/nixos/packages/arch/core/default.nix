@@ -48,6 +48,7 @@ in
       dolphin-emu
       wheelwizard
       tidal-hifi
+      spotify
       osu-lazer-bin
     ];
   };
