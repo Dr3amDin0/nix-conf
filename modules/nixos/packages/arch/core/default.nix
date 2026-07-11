@@ -48,7 +48,7 @@ in
       tidal-hifi
       spotify
       krita
-      OpenTabletDriver
+      opentabletdriver
     ];
   };
 }
