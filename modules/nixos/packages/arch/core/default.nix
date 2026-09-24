@@ -44,11 +44,8 @@ in
       obsidian
       unzip
       sbctl
-      pinta
-      tidal-hifi
       spotify
-      krita
-      opentabletdriver
+      python3
     ];
   };
 }
