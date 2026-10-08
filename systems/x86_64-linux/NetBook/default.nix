@@ -40,7 +40,7 @@
   # bootloader configuration
   boot = {
     loader.systemd-boot.enable = true;
-    efi.efiSysMountPoint = "/boot";
+    loader.efi.efiSysMountPoint = "/boot";
   };
 
   # set timezone
