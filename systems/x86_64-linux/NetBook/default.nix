@@ -1,18 +1,17 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
-  imports =
-    [ ./hardware.nix ];
+  imports = [ 
+      ./hardware.nix
+      inputs.nixos-hardware.nixosModules.apple-t2
+  ];
 
   # load from namespace
   nyxia = {
 
     packages = {
       # install core packages
-      core.enable = true;
-      gui.enable = true;
-      nvidia.enable = true;
-      programming.enable = true;
+      netbook.enable = true;
     };
 
     # create user
@@ -41,7 +40,7 @@
   # bootloader configuration
   boot = {
     loader.systemd-boot.enable = true;
-    kernelPackages = pkgs.linuxPackages_latest;
+    efi.efiSysMountPoint = "/boot";
   };
 
   # set timezone
@@ -63,6 +62,23 @@
       "8.8.8.8"
     ];
   };
+
+  # t2linux
+  boot.kernelParams = [
+    "intel_iommu=on"
+    "iommu=pt"
+    "pm_async=off"
+  ];
+
+  # T2 keyboard/Touch Bar
+  boot.kernelModules = [
+    "t2bce_vhci"
+  ];
+
+  boot.extraModprobeConfig = ''
+    options hid-appletb-kbd mode=1
+  '';
+
 }
 
 
